@@ -1,1 +1,1 @@
-const test = document.querySelector('class')
+console.log('test');
