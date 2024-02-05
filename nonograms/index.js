@@ -102,12 +102,12 @@ for (let i = 0; i < 4; i++) {
   attemptsWrapper.appendChild(attemptsTitle);
 }
 const attemptsTitle = document.querySelectorAll(".attempts__title");
-const attemptsValue = ["attempts", "0", ":", "3"];
+const attemptsValue = ["attempts", "0", "/", "3"];
 for (let i = 0; i < attemptsTitle.length; i++) {
   attemptsTitle[i].textContent = attemptsValue[i];
 }
 
-/*game*/
+/*game flag*/
 const gameWrapper = document.createElement("div");
 gameWrapper.classList.add("game__wrapper", "flag");
 right.appendChild(gameWrapper);
@@ -119,3 +119,37 @@ gameWrapper.appendChild(topPart);
 const gameDiff = document.createElement("div");
 gameDiff.classList.add("game-diff");
 topPart.appendChild(gameDiff);
+
+const inputColor = document.createElement("input");
+inputColor.setAttribute("id", "color");
+inputColor.setAttribute("type", "color");
+inputColor.setAttribute("name", "bg");
+inputColor.setAttribute("value", "#000");
+gameDiff.appendChild(inputColor);
+
+const gameHeader = document.createElement("table");
+gameHeader.classList.add("game-header");
+topPart.appendChild(gameHeader);
+
+const headerBody = document.createElement("tbody");
+headerBody.classList.add("header-body");
+gameHeader.appendChild(headerBody);
+
+for (let i = 0; i < 3; i++) {
+  const headerRow = document.createElement("tr");
+  headerRow.classList.add("header-row");
+  headerBody.appendChild(headerRow);
+}
+
+const headerRow = document.querySelectorAll(".header-row");
+for (let i = 0; i < headerRow.length; i++) {
+  for (let j = 0; j < 5; j++) {
+    const rowCell = document.createElement("td");
+    rowCell.classList.add("row-cell");
+    headerRow[i].appendChild(rowCell);
+  }
+}
+
+const rowCell = document.querySelectorAll(".row-cell");
+
+for (let i = 0; rowCell.length; i++) {}
