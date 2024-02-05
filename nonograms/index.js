@@ -231,3 +231,33 @@ for (let i = 0; i < bodyRow.length; i++) {
     bodyRow[i].appendChild(rowCellBody);
   }
 }
+
+/*modla window*/
+const gameTopic = document.createElement("div");
+gameTopic.classList.add(
+  "game-topics__wrapper",
+  "topics-animation_open",
+  "topics-animation_close",
+  "topics-hidden",
+);
+main.appendChild(gameTopic);
+
+const topicsWrapper = document.createElement("div");
+topicsWrapper.classList.add("topics__wrapper");
+gameTopic.appendChild(topicsWrapper);
+
+const topics = document.createElement("div");
+topics.classList.add("topics");
+topicsWrapper.appendChild(topics);
+
+for (let i = 0; i < 3; i++) {
+  const topicTitle = document.createElement("h2");
+  topicTitle.classList.add("topic-title");
+  topics.appendChild(topicTitle);
+}
+
+const topicsTitle = document.querySelectorAll(".topic-title");
+const arrTopics = ["flag", "sands watch", "airplain"];
+for (let i = 0; i < topicsTitle.length; i++) {
+  topicsTitle[i].textContent = arrTopics[i];
+}
