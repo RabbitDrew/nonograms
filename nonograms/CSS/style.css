@@ -206,7 +206,7 @@ table {
   background-color: #9e9e9e;
   cursor: pointer;
 }
-.left .game-aside .aside-body .aside-column .column-cell .cell-title {
+.left .game-aside .aside-body .aside-column .column-cell .cell-title__column {
   text-transform: uppercase;
   font-size: 18px;
   color: #000;
@@ -215,13 +215,13 @@ table {
 .left .game-aside .aside-body .aside-column .column-cell:hover {
   opacity: 0.5;
 }
-.left .game-field .field-body .body-row .row-cell {
+.left .game-field .field-body .body-row .row-cell__body {
   width: 25px;
   height: 25px;
   border: 1px #000 solid;
   cursor: pointer;
 }
-.left .game-field .field-body .body-row .row-cell:hover {
+.left .game-field .field-body .body-row .row-cell__body:hover {
   opacity: 0.5;
 }
 

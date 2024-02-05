@@ -219,7 +219,7 @@ table {
           border: 1px #000 solid;
           background-color: #9e9e9e;
           cursor: pointer;
-          .cell-title {
+          .cell-title__column {
             text-transform: uppercase;
             font-size: 18px;
             color: #000;
@@ -236,13 +236,13 @@ table {
   .game-field {
     .field-body {
       .body-row {
-        .row-cell {
+        .row-cell__body {
           width: 25px;
           height: 25px;
           border: 1px #000 solid;
           cursor: pointer;
         }
-        .row-cell:hover {
+        .row-cell__body:hover {
           opacity: 0.5;
         }
       }
