@@ -1,6 +1,5 @@
 import { body } from "../header/header.js";
-import { a } from "../game-structure/game_field_10x10.js";
-let s = a;
+
 export const creatGameStructure = function (size) {
   /*main*/
   const createMain = document.createElement("main");
