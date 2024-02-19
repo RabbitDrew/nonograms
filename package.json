@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky && husky install",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "build": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,9 @@
   "homepage": "https://github.com/rolling-scopes-school/rabbitdrew-JSFE2023Q4#readme",
   "devDependencies": {
     "eslint": "^8.56.0",
+    "husky": "^8.0.0",
     "prettier": "3.2.4",
-    "husky": "^8.0.0"
+    "webpack": "^5.90.1",
+    "webpack-cli": "^5.1.4"
   }
 }
