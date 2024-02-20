@@ -1,5 +1,5 @@
 import { body } from "../header/header.js";
-
+import { fieldIsEnable } from "../game-structure/game_diffyculty.js";
 export const creatGameStructure = function (size) {
   /*main*/
   const createMain = document.createElement("main");
@@ -36,7 +36,8 @@ export const creatGameStructure = function (size) {
     createNumbersRow.classList.add("numbers-row");
     createGamenumbersRows.appendChild(createNumbersRow);
   }
-  const getNumbersRow = document.querySelectorAll(".numbers-row");
+  fieldIsEnable();
+  /*const getNumbersRow = document.querySelectorAll(".numbers-row");
   for (let i = 0; i < getNumbersRow.length; i++) {
     for (let j = 0; j < 5; j++) {
       //example to change size
@@ -44,7 +45,7 @@ export const creatGameStructure = function (size) {
       createRowCell.classList.add("row-cell");
       getNumbersRow[i].appendChild(createRowCell);
     }
-  }
+  }*/
 
   /*bottom part of field*/
   const createGameBottom = document.createElement("div");
@@ -88,4 +89,4 @@ export const creatGameStructure = function (size) {
   }
 };
 
-creatGameStructure(s);
+creatGameStructure();
