@@ -1,5 +1,6 @@
-import { createDropdownDifficulty } from "../modal-windows/dropdown";
-import { creatDropdownResults } from "../modal-windows/dropdown";
+import { createDropdownDifficulty } from "../modal-windows/dropdown.js";
+import { creatDropdownResults } from "../modal-windows/dropdown.js";
+import { createDropdownTheme } from "../modal-windows/dropdown.js";
 export const body = document.querySelector(".page");
 export const createHeader = function () {
   const createHeader = document.createElement("header");
@@ -27,6 +28,7 @@ export const createHeader = function () {
   }
   const itemTitelsArr = [
     "game difficulty",
+    "game theme",
     "reset",
     "solution",
     "save",
@@ -38,19 +40,20 @@ export const createHeader = function () {
   const getMenuItems = document.querySelectorAll(".nav-item");
   for (let i = 0; i < getMenuItems.length; i++) {
     const createItemtitle = document.createElement("h2");
-    if (i >= 0 && i < 7) {
+    if (i >= 0 && i < 8) {
       createItemtitle.classList.add("item-title");
       getMenuItems[i].appendChild(createItemtitle);
-    } else if (i === 6) {
+    } else if (i === 7) {
       createItemtitle.classList.add("item-title", "close_light");
       getMenuItems[i].appendChild(createItemtitle);
-    } else if (i === 7) {
+    } else if (i === 8) {
       createItemtitle.classList.add("item-title", "close_dark");
       getMenuItems[i].appendChild(createItemtitle);
     }
   }
   /*dropdown*/
   createDropdownDifficulty();
+  createDropdownTheme();
   creatDropdownResults();
   const getItemTitle = document.querySelectorAll(".item-title");
   for (let i = 0; i < getItemTitle.length; i++) {
