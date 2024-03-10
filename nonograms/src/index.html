@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Style-->
+    <!--<link rel="stylesheet" href="../CSS/style.css" />-->
+    <title>nonograms</title>
+  </head>
+
+  <body class="page">
+    <!--
+    <header class="page-header">
+      <div class="header-title"><h1 class="title">nonograms</h1></div>
+      <nav class="header-nav">
+        <ul class="nav__wrapper">
+          <li class="nav-item">
+            <h2 class="item-title">game difficulty</h2>
+            <ul
+              class="difficulty-dropdown hide_dropdown animation_open_dropdown animation_close_dropdown"
+            >
+              <li class="dropdown-item__difficulty">
+                <h2 class="dropdown-item--title__difficulty">5x5</h2>
+              </li>
+              <li class="dropdown-item__difficulty">
+                <h2 class="dropdown-item--title__difficulty">10x10</h2>
+              </li>
+              <li class="dropdown-item__difficulty">
+                <h2 class="dropdown-item--title__difficulty">15x15</h2>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <h2 class="item-title">game theme</h2>
+            <ul
+            class="theme-dropdown hide_dropdown animation_open_dropdown animation_close_dropdown"
+          >
+            <li class="dropdown-item__theme">
+              <h2 class="dropdown-item--title__theme">flag</h2>
+              <h2 class="dropdown-item--title__theme">airplain</h2>
+            </li>
+          </ul>
+          </li>
+          <li class="nav-item"><h2 class="item-title">reset</h2></li>
+          <li class="nav-item"><h2 class="item-title">solution</h2></li>
+          <li class="nav-item"><h2 class="item-title">save</h2></li>
+          <li class="nav-item">
+            <h2 class="item-title">load the last game</h2>
+          </li>
+          <li class="nav-item">
+            <h2 class="item-title">results</h2>
+            <ul
+              class="results-dropdown hide_dropdown animation_open_dropdown animation_close_dropdown"
+            >
+              <li class="dropdown-item__results">
+                <div class="item-picture__wrapper">
+                  <h2 class="item-picture">Flag</h2>
+                </div>
+                <div class="item-finish--time__wrapper">
+                  <h2 class="item-finish">XX</h2>
+                  <h2 class="item-finish">:</h2>
+                  <h2 class="item-finish">XX</h2>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item"><h2 class="item-title">dark mode</h2></li>
+          <li class="nav-item">
+            <h2 class="item-title close_dark">light mode</h2>
+          </li>
+        </ul>
+      </nav>
+      <div class="header-timer--theme">
+        <h2 class="timer-title">XX</h2>
+        <h2 class="timer-title">:</h2>
+        <h2 class="timer-title">XX</h2>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main-left__part"></div>
+      <div class="main-right__part">
+        <div class="right-game--field">
+          <div class="game__top">
+            <div class="game-type"></div>
+            <div class="game-numbers__rows">
+              <div class="numbers-row">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+              <div class="numbers-row">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+              <div class="numbers-row">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+            </div>
+          </div>
+          <div class="game__bottom">
+            <div class="game-numbers__column">
+              <div class="number-column">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+              <div class="number-column">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+              <div class="number-column">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+            </div>
+            <div class="game-cells">
+              <div class="cells-row">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+              <div class="cells-row">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+              <div class="cells-row">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+              <div class="cells-row">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+              <div class="cells-row">
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+                <div class="row-cell"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section
+        class="modal-win--bg__wrapper hide-modal-win modal-win-open_animation modal-win-close_animation"
+      >
+        <div class="win-window__container">
+          <div class="window">
+            <h2 class="window-title__win">good job,</h2>
+            <h2 class="window-title__win">you've won</h2>
+            <div class="window-btn">
+              <h2 class="btn-title__win">play again</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  --></body>
+</html>

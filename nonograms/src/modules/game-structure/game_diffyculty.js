@@ -1,37 +1,10 @@
+import { getIndexOftheButton } from "./opened_window.js";
 export const fieldIsEnable = function () {
   const getDropdownItemDifficulty = document.querySelectorAll(
     ".dropdown-item__difficulty",
   );
+  //current field size
   let fieldSize = 5;
-  function getIndexOftheButton(index) {
-    if (index === 0) {
-      fieldSize = 5;
-    } else if (index === 1) {
-      fieldSize = 10;
-    } else if (index === 2) {
-      fieldSize = 15;
-    }
-  }
-  /*flag of opened window*/
-  let enableField5x5 = false;
-  let enableField10x10 = false;
-  let enableField15x15 = false;
-  function isWindowOpened() {
-    if (fieldSize === 5) {
-      enableField5x5 = true;
-      enableField10x10 = false;
-      enableField15x15 = false;
-    } else if (fieldSize === 10) {
-      enableField5x5 = false;
-      enableField10x10 = true;
-      enableField15x15 = false;
-    } else if (fieldSize === 15) {
-      enableField5x5 = false;
-      enableField10x10 = false;
-      enableField15x15 = true;
-    }
-  }
-  isWindowOpened(); //enable 5x5 flag
   /*set number of rows of empty cells for game*/
   const getGemeCellsRows = document.querySelector(".game-cells");
   function addRows(size) {
@@ -55,6 +28,7 @@ export const fieldIsEnable = function () {
     }
   }
   /*set diffyculty by changeing amount of number of cells nad rows of the game field*/
+  //seting cell for all part of the field
   function addCells(size) {
     const getNumbersRow = document.querySelectorAll(".numbers-row");
     const getNumbersCollumn = document.querySelectorAll(".number-column");
@@ -70,13 +44,23 @@ export const fieldIsEnable = function () {
     }
   }
   addCells(fieldSize); //enable 5x5 cells
+  //set h2 tag for adding titles in cells
+  function addCellTitle() {
+    const getRowCell = document.querySelectorAll(".row-cell");
+    for (let i = 0; i < getRowCell.length; i++) {
+      const createRowCellTitle = document.createElement("h2");
+      createRowCellTitle.classList.add("cell__title");
+      getRowCell[i].appendChild(createRowCellTitle);
+    }
+  }
+  addCellTitle(); //enable 5x5 cell
   for (let i = 0; i < getDropdownItemDifficulty.length; i++) {
     getDropdownItemDifficulty[i].addEventListener("click", (event) => {
-      getIndexOftheButton(i);
+      fieldSize = getIndexOftheButton(i);
       addRows(fieldSize);
       removeCellsAndRows();
       addCells(fieldSize);
-      isWindowOpened();
+      addCellTitle();
     });
   }
 };

@@ -1,6 +1,9 @@
+import "./header_style.css";
+
 import { createDropdownDifficulty } from "../modal-windows/dropdown.js";
 import { creatDropdownResults } from "../modal-windows/dropdown.js";
 import { createDropdownTheme } from "../modal-windows/dropdown.js";
+
 export const body = document.querySelector(".page");
 export const createHeader = function () {
   const createHeader = document.createElement("header");

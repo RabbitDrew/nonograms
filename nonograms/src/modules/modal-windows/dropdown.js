@@ -1,3 +1,5 @@
+import "./dropdown-styles.css";
+import { switchTheFlagOfEnabledWin } from "../game_topics/topic_list.js";
 /*choseing difficulties*/
 export const createDropdownDifficulty = function () {
   const getMenuItems = document.querySelectorAll(".nav-item");
@@ -37,7 +39,8 @@ export const createDropdownDifficulty = function () {
       dropDownDifficultyTitleArr[i];
   }
 };
-//-------------------------------------------------------------------
+
+//rewrite list of topics according difficulty of the game
 /*dropdown theme*/
 export const createDropdownTheme = function () {
   const getMenuItems = document.querySelectorAll(".nav-item");
@@ -53,12 +56,15 @@ export const createDropdownTheme = function () {
       getMenuItems[i].appendChild(createThemeDropdown);
     }
   }
+
+  //------
   const getThemeDropdown = document.querySelector(".theme-dropdown");
   for (let i = 0; i < 5; i++) {
     const createDropdownItemTheme = document.createElement("li");
     createDropdownItemTheme.classList.add("dropdown-item__theme");
     getThemeDropdown.appendChild(createDropdownItemTheme);
   }
+
   const getDropdownItemTheme = document.querySelectorAll(
     ".dropdown-item__theme",
   );
@@ -67,19 +73,24 @@ export const createDropdownTheme = function () {
     createDropDownItemTitle.classList.add("dropdown-item--title__theme");
     getDropdownItemTheme[i].appendChild(createDropDownItemTitle);
   }
+
+  //assighn arr with list of topicks
+  switchTheFlagOfEnabledWin();
+  /*
   const dropDownThemeTitleArr = [
-    "flag",
-    "airplain",
-    "sands watch",
-    "tower",
-    "car",
-  ];
+  "flag",
+  "airplain",
+  "sands watch",
+  "tower",
+  "car"]
+
   const getDropDownItemThemeTitle = document.querySelectorAll(
     ".dropdown-item--title__theme",
   );
   for (let i = 0; i < getDropDownItemThemeTitle.length; i++) {
     getDropDownItemThemeTitle[i].textContent = dropDownThemeTitleArr[i];
   }
+  */
 };
 /*results list*/
 export const creatDropdownResults = function () {

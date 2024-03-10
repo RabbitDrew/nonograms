@@ -1,0 +1,112 @@
+/*dropdown difficulty*/
+.difficulty-dropdown,
+.theme-dropdown {
+  width: fit-content;
+  height: fit-content; // make it adaptive
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 60px;
+  background-color: #eaeaea;
+  border-radius: 20px;
+  opacity: 0.7;
+  padding: 20px;
+  .dropdown-item__difficulty,
+  .dropdown-item__theme {
+    width: 100%;
+    height: fit-content;
+    list-style-type: none;
+    cursor: pointer;
+    .dropdown-item--title__difficulty,
+    .dropdown-item--title__theme {
+      font-size: 18px;
+      font-weight: 400;
+      text-align: center;
+      font-family: "Roboto" sans-serif;
+      text-transform: uppercase;
+      color: #000;
+    }
+  }
+}
+/*dropdown result*/
+.results-dropdown {
+  width: fit-content;
+  height: fit-content; //make it adaptive
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  position: absolute;
+  top: 60px;
+  background-color: #eaeaea;
+  border-radius: 20px;
+  opacity: 0.7;
+  padding: 20px;
+  .dropdown-item__results {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    .item-picture__wrapper {
+      .item-picture {
+        font-size: 15px;
+        font-weight: 400;
+        font-family: "Roboto" sans-serif;
+        text-transform: uppercase;
+        color: #000;
+      }
+    }
+  }
+
+  .item-finish--time__wrapper {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .item-finish {
+      font-size: 15px;
+      font-weight: 400;
+      font-family: "Roboto" sans-serif;
+      text-transform: uppercase;
+      color: #000;
+    }
+  }
+}
+
+.hide_dropdown {
+  display: none;
+}
+
+.animation_close_dropdown {
+  animation-name: dropDownListClose;
+  animation-duration: 1s;
+}
+@keyframes dropDownListClose {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-300%);
+  }
+}
+
+.animation_open_dropdown {
+  animation-name: dropDownListOpen;
+  animation-duration: 1s;
+}
+
+@keyframes dropDownListOpen {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

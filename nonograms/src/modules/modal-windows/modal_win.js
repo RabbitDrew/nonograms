@@ -1,3 +1,4 @@
+import "./modal_win_styles.css";
 export const createWinWindow = function () {
   const getMain = document.querySelector(".main");
   const createModlaWinBgWrapper = document.createElement("section");

@@ -1,6 +1,7 @@
+import "./field_style.css";
 import { body } from "../header/header.js";
 import { fieldIsEnable } from "../game-structure/game_diffyculty.js";
-export const creatGameStructure = function (size) {
+export const creatGameStructure = function () {
   /* main page structure*/
   const createMain = document.createElement("main");
   createMain.classList.add("main");
